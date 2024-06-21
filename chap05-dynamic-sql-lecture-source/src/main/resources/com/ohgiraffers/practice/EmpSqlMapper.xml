@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ohgiraffers.practice.EmpSqlMapper">
+    <resultMap id="empResultMap" type="com.ohgiraffers.compractice.EmpDTO">
+        <id property="empId" column="emp_id"/>
+        <result property="empName" column="emp_name"/>
+        <result property="empNo" column="emp_no"/>
+        <result property="email" column="email"/>
+        <result property="phone" column="email"/>
+        <result property="deptCode" column="dept_code"/>
+        <result property="jobCode" column="job_code"/>
+        <result property="salLevel" column="sal_level"/>
+        <result property="salary" column="salary"/>
+        <result property="bonus" column="bonus"/>
+        <result property="managerId" column="manager_id"/>
+        <result property="hireDate" column="hire_date"/>
+        <result property="entDate" column="ent_date"/>
+        <result property="entYn" column="ent_yn"/>
+    </resultMap>
+    <select id="searchEmp" parameterType="SearchCriteria" resultMap="empResultMap">
+        select
+        *
+        from
+        employee
+        <if test="condition == 'empName'">
+            and emp_name like concat('%', #{ value }, '%')
+        </if>
+        <if test="condition == 'empId'">
+            and emp_id = #{ value }
+        </if>
+        order by emp_id
+    </select>
+</mapper>
