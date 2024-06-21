@@ -1,5 +1,9 @@
-package com.ohgiraffers.practice;
+package com.ohgiraffers.practice.common;
 
+
+import com.ohgiraffers.practice.dto.EmpDTO;
+import com.ohgiraffers.practice.service.EmpService;
+import com.ohgiraffers.practice.view.PrintResult;
 
 import java.util.List;
 import java.util.Map;

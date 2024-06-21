@@ -1,6 +1,6 @@
-package com.ohgiraffers.practice;
+package com.ohgiraffers.practice.view;
 
-import com.ohgiraffers.section02.javaconfig.MenuDTO;
+import com.ohgiraffers.practice.dto.EmpDTO;
 
 import java.util.List;
 

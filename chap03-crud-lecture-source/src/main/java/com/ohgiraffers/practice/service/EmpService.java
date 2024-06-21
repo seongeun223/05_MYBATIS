@@ -1,10 +1,12 @@
-package com.ohgiraffers.practice;
+package com.ohgiraffers.practice.service;
 
+import com.ohgiraffers.practice.dao.EmpMapper;
+import com.ohgiraffers.practice.dto.EmpDTO;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
 
-import static com.ohgiraffers.practice.Template.getSqlSession;
+import static com.ohgiraffers.practice.template.Template.getSqlSession;
 
 
 public class EmpService {

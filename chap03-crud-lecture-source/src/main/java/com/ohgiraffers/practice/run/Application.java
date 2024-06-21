@@ -1,5 +1,7 @@
-package com.ohgiraffers.practice;
+package com.ohgiraffers.practice.run;
 
+
+import com.ohgiraffers.practice.common.EmpController;
 
 import java.util.HashMap;
 import java.util.Map;

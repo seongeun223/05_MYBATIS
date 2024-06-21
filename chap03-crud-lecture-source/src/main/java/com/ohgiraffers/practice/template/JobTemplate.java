@@ -1,5 +1,6 @@
-package com.ohgiraffers.practice;
+package com.ohgiraffers.practice.template;
 
+import com.ohgiraffers.practice.dao.JobMapper;
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
@@ -8,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 
-public class Template {
+public class JobTemplate {
     private static String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static String URL = "jdbc:mysql://localhost/employee_db";
     private static String USER = "ohgiraffers";
@@ -26,7 +27,7 @@ public class Template {
 
             Configuration configuration = new Configuration(environment);
 
-            configuration.addMapper(EmpMapper.class);
+            configuration.addMapper(JobMapper.class);
 
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
         }

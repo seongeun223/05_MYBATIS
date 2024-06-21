@@ -1,4 +1,6 @@
-package com.ohgiraffers.practice;
+package com.ohgiraffers.practice.dao;
+
+import com.ohgiraffers.practice.dto.EmpDTO;
 
 import java.util.List;
 

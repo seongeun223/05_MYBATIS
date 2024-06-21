@@ -1,4 +1,4 @@
-package com.ohgiraffers.practice;
+package com.ohgiraffers.practice.dto;
 
 import java.sql.Date;
 
