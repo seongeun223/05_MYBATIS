@@ -19,6 +19,7 @@
         <result property="entDate" column="ent_date"/>
         <result property="entYn" column="ent_yn"/>
     </resultMap>
+
     <select id="searchEmp" parameterType="SearchCriteria" resultMap="empResultMap">
         select
         *
