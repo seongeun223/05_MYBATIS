@@ -93,5 +93,5 @@
         order by a.dept_id
     </select>
 
-    
+
 </mapper>
