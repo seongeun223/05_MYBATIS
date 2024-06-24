@@ -152,7 +152,7 @@
              ne : not equal to -->
         <if test="condition != null and condition eq 'menuCode'">
             <where>
-                a.menu_code = #{ value }
+               a.menu_code = #{ value }
             </where>
         </if>
     </select>
