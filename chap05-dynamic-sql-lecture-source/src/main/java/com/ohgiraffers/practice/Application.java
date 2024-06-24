@@ -23,9 +23,9 @@ public class Application {
                 case 1:
                     ifSubEmp();
                     break;
-//                case 2:
-//                    trimSubEmp();
-//                    break;
+                case 2:
+                    trimSubEmp();
+                    break;
 
                 case 9:
                     System.out.println("프로그램을 종료합니다.");
@@ -33,6 +33,7 @@ public class Application {
             }
         } while (true);
     }
+
 
     private static void ifSubEmp() {
 
@@ -64,5 +65,18 @@ public class Application {
         String value = sc.nextLine();
 
         return new SearchCriteria(condition, value);
+    }
+
+    private static void trimSubEmp() {
+
+        Scanner sc = new Scanner(System.in);
+        EmpService empService = new EmpService();
+        do {
+            System.out.println("=========== if 서브메뉴 ===========");
+            System.out.println("1. 직원명 또는 사원번호로 검색하여 직원 목록 보여주기");
+            System.out.println("9. 이전 메뉴로");
+            System.out.println("번호를 입력하세요. : ");
+            int no = sc.nextInt();
+        }
     }
 }
