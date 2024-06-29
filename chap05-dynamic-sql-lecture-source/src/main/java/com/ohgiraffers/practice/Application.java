@@ -89,7 +89,7 @@ public class Application {
                     empService.searchEmpByCodeOrSearchAll(inputAllOrOne());
                     break;
                 case 2:
-                    empService.searchEmpByNameORCategory(inputSearchCriteriaMap());
+                    empService.searchEmpByNameORDept(inputSearchCriteriaMap());
                     break;
                 case 3:
                     empService.modifyEmp(inputChangeInfo());
