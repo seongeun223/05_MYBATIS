@@ -1,5 +1,4 @@
 package com.ohgiraffers.practice;
-import com.ohgiraffers.common.Template;
 import com.ohgiraffers.compractice.EmpDTO;
 import com.ohgiraffers.compractice.SearchCriteria;
 import org.apache.ibatis.session.SqlSession;
@@ -31,12 +30,12 @@ public class EmpService {
 
     public void searchEmpByCodeOrSearchAll(SearchCriteria searchCriteria) {
 
-        SqlSession sqlSession = Template.getSqlSession();
+        SqlSession sqlSession = getSqlSession();
 
         mapper = sqlSession.getMapper(EmpSqlMapper.class);
 
 
-        List<EmpDTO> empList = mapper.searcEmpByCodeOrSearchAll(searchCriteria);
+        List<EmpDTO> empList = mapper.searchEmpByCodeOrSearchAll(searchCriteria);
 
         if(empList != null && empList.size() > 0) {
             for(EmpDTO emp : empList) {
@@ -50,7 +49,7 @@ public class EmpService {
 
     public void searchEmpByNameORDept(Map<String, Object> criteria) {
 
-        SqlSession sqlSession = Template.getSqlSession();
+        SqlSession sqlSession = getSqlSession();
 
         mapper = sqlSession.getMapper(EmpSqlMapper.class);
 

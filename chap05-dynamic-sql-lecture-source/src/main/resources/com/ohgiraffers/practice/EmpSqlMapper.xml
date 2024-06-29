@@ -35,7 +35,7 @@
         order by emp_id
     </select>
 
-    <select id="searcEmpByCodeOrSearchAll" parameterType="SearchCriteria" resultMap="empResultMap">
+    <select id="searchEmpByCodeOrSearchAll" parameterType="SearchCriteria" resultMap="empResultMap">
         select
         *
         from

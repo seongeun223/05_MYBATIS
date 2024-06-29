@@ -9,7 +9,7 @@ import java.util.Map;
 public interface EmpSqlMapper {
     List<EmpDTO> searchEmp(SearchCriteria searchCriteria);
 
-    List<EmpDTO> searcEmpByCodeOrSearchAll(SearchCriteria searchCriteria);
+    List<EmpDTO> searchEmpByCodeOrSearchAll(SearchCriteria searchCriteria);
 
     List<EmpDTO> searchMenuByNameORDept(Map<String, Object> criteria);
 }

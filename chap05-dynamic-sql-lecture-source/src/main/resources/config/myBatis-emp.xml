@@ -22,7 +22,6 @@
         </environment>
     </environments>
     <mappers>
-        <!-- <mapper resource="com/ohgiraffers/section01/xml/DynamicSqlMapper.xml"/>-->
         <package name="com.ohgiraffers.practice"/>
     </mappers>
 </configuration>
