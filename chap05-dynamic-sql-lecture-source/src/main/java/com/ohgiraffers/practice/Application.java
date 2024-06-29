@@ -32,7 +32,7 @@ public class Application {
 
                 case 9:
                     System.out.println("프로그램을 종료합니다.");
-                    break;
+                    return;
             }
         } while (true);
     }
@@ -54,7 +54,7 @@ public class Application {
                     empService.searchEmp(inputSearchCriteria());
                     break;
                 case 9:
-                    break;
+                    return;
             }
         } while (true);
     }
@@ -95,7 +95,7 @@ public class Application {
 //                    empService.modifyEmp(inputChangeInfo());
 //                    break;
                 case 9:
-                    break;
+                    return;
             }
         } while (true);
         }

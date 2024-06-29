@@ -40,7 +40,7 @@
         *
         from
         employee
-        <if test="condition != null and condition eq 'emp_id'">
+        <if test="condition != null and condition eq 'empId'">
             where emp_id = #{ value }
         </if>
     </select>
