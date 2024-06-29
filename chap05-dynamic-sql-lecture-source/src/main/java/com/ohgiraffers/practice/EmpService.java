@@ -47,14 +47,14 @@ public class EmpService {
         sqlSession.close();
     }
 
-    public void searchEmpByNameORDept(Map<String, Object> criteria) {
+    public void searchEmpByNameOrDept(Map<String, Object> criteria) {
 
         SqlSession sqlSession = getSqlSession();
 
         mapper = sqlSession.getMapper(EmpSqlMapper.class);
 
 
-        List<EmpDTO> empList = mapper.searchMenuByNameORDept(criteria);
+        List<EmpDTO> empList = mapper.searchMenuByNameOrDept(criteria);
 
         if(empList != null && empList.size() > 0) {
             for(EmpDTO emp : empList) {

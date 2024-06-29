@@ -11,5 +11,5 @@ public interface EmpSqlMapper {
 
     List<EmpDTO> searchEmpByCodeOrSearchAll(SearchCriteria searchCriteria);
 
-    List<EmpDTO> searchMenuByNameORDept(Map<String, Object> criteria);
+    List<EmpDTO> searchMenuByNameOrDept(Map<String, Object> criteria);
 }

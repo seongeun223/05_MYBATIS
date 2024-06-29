@@ -17,7 +17,7 @@ public class Application {
         do {
             System.out.println("========== 마이바티스 동적 SQL (조건문) ==========");
             System.out.println("1. if 확인하기");
-            System.out.println("2. trim (where, set) 확인하기");
+            System.out.println("2. trim 확인하기");
             System.out.println("9. 종료하기");
             System.out.println("메뉴를 선택하세요. : ");
             int no = sc.nextInt();
@@ -89,7 +89,7 @@ public class Application {
                     empService.searchEmpByCodeOrSearchAll(inputAllOrOne());
                     break;
                 case 2:
-                    empService.searchEmpByNameORDept(inputSearchCriteriaMap());
+                    empService.searchEmpByNameOrDept(inputSearchCriteriaMap());
                     break;
 //                case 3:
 //                    empService.modifyEmp(inputChangeInfo());
@@ -132,6 +132,7 @@ public class Application {
             String deptValue = sc.nextLine();
 
             criteria.put("deptValue", deptValue);
+
         } else if ("name".equals(condition)) {
 
             System.out.println("검색할 이름을 입력하세요 : ");

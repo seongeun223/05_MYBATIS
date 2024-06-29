@@ -41,7 +41,24 @@
         from
         employee
         <if test="condition != null and condition eq 'empId'">
-            where emp_id = #{ value }
+            <where>
+                emp_id = #{ value }
+            </where>
         </if>
+    </select>
+
+    <select id="searchMenuByNameOrDept" parameterType="hashMap" resultMap="empResultMap">
+        select
+        *
+        from
+        employee
+        <trim prefix="where" prefixOverrides="AND | OR">
+            <if test="nameValue != null">
+                emp_name like concat('%', #{ nameValue }, '%')
+            </if>
+            <if test="deptValue != null">
+                and dept_code = #{ deptValue }
+            </if>
+        </trim>
     </select>
 </mapper>
