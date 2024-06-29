@@ -91,9 +91,9 @@ public class Application {
                 case 2:
                     empService.searchEmpByNameORDept(inputSearchCriteriaMap());
                     break;
-                case 3:
-                    empService.modifyEmp(inputChangeInfo());
-                    break;
+//                case 3:
+//                    empService.modifyEmp(inputChangeInfo());
+//                    break;
                 case 9:
                     break;
             }
@@ -154,7 +154,7 @@ public class Application {
     }
 
 
-    private static Object inputChangeInfo() {
-    }
+//    private static Object inputChangeInfo() {
+//    }
 }
 

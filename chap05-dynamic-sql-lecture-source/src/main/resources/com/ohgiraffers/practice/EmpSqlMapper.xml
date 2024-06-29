@@ -32,7 +32,16 @@
                 and emp_id = #{ value }
             </if>
         </where>
-
         order by emp_id
+    </select>
+
+    <select id="searcEmpByCodeOrSearchAll" parameterType="SearchCriteria" resultMap="empResultMap">
+        select
+        *
+        from
+        employee
+        <if test="condition != null and condition eq 'emp_id'">
+            where emp_id = #{ value }
+        </if>
     </select>
 </mapper>
