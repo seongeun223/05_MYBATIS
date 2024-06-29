@@ -91,9 +91,9 @@ public class Application {
                 case 2:
                     empService.searchEmpByNameOrDept(inputSearchCriteriaMap());
                     break;
-//                case 3:
-//                    empService.modifyEmp(inputChangeInfo());
-//                    break;
+                case 3:
+                    empService.modifyEmp(inputChangeInfo());
+                    break;
                 case 9:
                     return;
             }
@@ -155,7 +155,26 @@ public class Application {
     }
 
 
-//    private static Object inputChangeInfo() {
-//    }
+    private static Map<String, Object> inputChangeInfo() {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("변경할 사원번호를 입력하세요. : ");
+        String empId = sc.nextLine();
+        System.out.println("변경할 사원 이름을 입력하세요. : ");
+        String empName = sc.nextLine();
+        System.out.println("변경할 부서 코드를 입력하세요. : ");
+        String deptCode = sc.nextLine();
+        System.out.println("변경할 급여를 입력하세요. : ");
+        Double salary = sc.nextDouble();
+
+        Map<String, Object> criteria = new HashMap<>();
+        criteria.put("empId", empId);
+        criteria.put("empName", empName);
+        criteria.put("deptCode", deptCode);
+        criteria.put("salary", salary);
+
+        return criteria;
+
+    }
 }
 
