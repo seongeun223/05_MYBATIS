@@ -88,12 +88,12 @@ public class Application {
                 case 1:
                     empService.searchEmpByCodeOrSearchAll(inputAllOrOne());
                     break;
-                case 2:
-                    empService.searchEmpByNameORCategory(inputSearchCriteriaMap());
-                    break;
-                case 3:
-                    empService.modifyEmp(inputChangeInfo());
-                    break;
+//                case 2:
+//                    empService.searchEmpByNameORCategory(inputSearchCriteriaMap());
+//                    break;
+//                case 3:
+//                    empService.modifyEmp(inputChangeInfo());
+//                    break;
                 case 9:
                     break;
             }
@@ -154,7 +154,7 @@ public class Application {
     }
 
 
-    private static Object inputChangeInfo() {
-    }
+//    private static Object inputChangeInfo() {
+//    }
 }
 

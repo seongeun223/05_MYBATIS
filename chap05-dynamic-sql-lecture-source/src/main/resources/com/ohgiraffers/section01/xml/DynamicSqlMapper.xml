@@ -210,19 +210,20 @@
 <!-- 방법 1 set 사용-->
 <!--        update-->
 <!--        tbl_menu-->
-        <set>
-            <if test="name != null and name != ''">
-            menu_name = #{ name },
-            </if>
-            <if test="categoryCode != null and categoryCode != ''">
-                category_code = #{ categoryCode },
-            </if>
-            <if test="orderableStatus != null and categoryCode != ''">
-                orderable_status = #{ orderableStatus }
-            </if>
-        </set>
-        where menu_code = #{ code }
+<!--        <set>-->
+<!--            <if test="name != null and name != ''">-->
+<!--            menu_name = #{ name },-->
+<!--            </if>-->
+<!--            <if test="categoryCode != null and categoryCode != ''">-->
+<!--                category_code = #{ categoryCode },-->
+<!--            </if>-->
+<!--            <if test="orderableStatus != null and categoryCode != ''">-->
+<!--                orderable_status = #{ orderableStatus }-->
+<!--            </if>-->
+<!--        </set>-->
+<!--        where menu_code = #{ code }-->
 
+<!-- 2. trim 사용-->
         update
         tbl_menu
         <trim prefix="set" prefixOverrides="," suffixOverrides=",">
