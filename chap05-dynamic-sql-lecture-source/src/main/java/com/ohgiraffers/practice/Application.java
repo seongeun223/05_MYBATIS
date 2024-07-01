@@ -88,21 +88,12 @@ public class Application {
                 case 1:
                     empService.searchEmpByCodeOrSearchAll(inputAllOrOne());
                     break;
-<<<<<<< HEAD
-//                case 2:
-//                    empService.searchEmpByNameORCategory(inputSearchCriteriaMap());
-//                    break;
-//                case 3:
-//                    empService.modifyEmp(inputChangeInfo());
-//                    break;
-=======
                 case 2:
                     empService.searchEmpByNameOrDept(inputSearchCriteriaMap());
                     break;
                 case 3:
                     empService.modifyEmp(inputChangeInfo());
                     break;
->>>>>>> d14717dd53a0842f5b2ce2d5ae8bfa40c80b210e
                 case 9:
                     return;
             }
@@ -163,11 +154,6 @@ public class Application {
         return criteria;
     }
 
-
-<<<<<<< HEAD
-//    private static Object inputChangeInfo() {
-//    }
-=======
     private static Map<String, Object> inputChangeInfo() {
 
         Scanner sc = new Scanner(System.in);
@@ -189,6 +175,6 @@ public class Application {
         return criteria;
 
     }
->>>>>>> d14717dd53a0842f5b2ce2d5ae8bfa40c80b210e
+
 }
 

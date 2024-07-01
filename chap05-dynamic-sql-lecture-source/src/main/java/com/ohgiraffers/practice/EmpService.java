@@ -34,7 +34,7 @@ public class EmpService {
 
         mapper = sqlSession.getMapper(EmpSqlMapper.class);
 
-<<<<<<< HEAD
+
 //
 ////        List<MenuDTO> menuList = mapper.searchMenuByCodeOrSearchAll(searchCriteria);
 //
@@ -46,7 +46,7 @@ public class EmpService {
 //            System.out.println("검색 결과가 존재하지 않습니다.");
 //        }
 //        sqlSession.close();
-=======
+
 
         List<EmpDTO> empList = mapper.searchEmpByCodeOrSearchAll(searchCriteria);
 
@@ -58,7 +58,7 @@ public class EmpService {
             System.out.println("검색 결과가 존재하지 않습니다.");
         }
         sqlSession.close();
->>>>>>> d14717dd53a0842f5b2ce2d5ae8bfa40c80b210e
+
     }
 
     public void searchEmpByNameOrDept(Map<String, Object> criteria) {
