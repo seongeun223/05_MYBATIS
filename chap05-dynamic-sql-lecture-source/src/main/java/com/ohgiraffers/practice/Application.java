@@ -17,7 +17,7 @@ public class Application {
         do {
             System.out.println("========== 마이바티스 동적 SQL (조건문) ==========");
             System.out.println("1. if 확인하기");
-            System.out.println("2. trim (where, set) 확인하기");
+            System.out.println("2. trim 확인하기");
             System.out.println("9. 종료하기");
             System.out.println("메뉴를 선택하세요. : ");
             int no = sc.nextInt();
@@ -32,7 +32,7 @@ public class Application {
 
                 case 9:
                     System.out.println("프로그램을 종료합니다.");
-                    break;
+                    return;
             }
         } while (true);
     }
@@ -54,7 +54,7 @@ public class Application {
                     empService.searchEmp(inputSearchCriteria());
                     break;
                 case 9:
-                    break;
+                    return;
             }
         } while (true);
     }
@@ -88,14 +88,23 @@ public class Application {
                 case 1:
                     empService.searchEmpByCodeOrSearchAll(inputAllOrOne());
                     break;
+<<<<<<< HEAD
 //                case 2:
 //                    empService.searchEmpByNameORCategory(inputSearchCriteriaMap());
 //                    break;
 //                case 3:
 //                    empService.modifyEmp(inputChangeInfo());
 //                    break;
-                case 9:
+=======
+                case 2:
+                    empService.searchEmpByNameOrDept(inputSearchCriteriaMap());
                     break;
+                case 3:
+                    empService.modifyEmp(inputChangeInfo());
+                    break;
+>>>>>>> d14717dd53a0842f5b2ce2d5ae8bfa40c80b210e
+                case 9:
+                    return;
             }
         } while (true);
         }
@@ -132,6 +141,7 @@ public class Application {
             String deptValue = sc.nextLine();
 
             criteria.put("deptValue", deptValue);
+
         } else if ("name".equals(condition)) {
 
             System.out.println("검색할 이름을 입력하세요 : ");
@@ -154,7 +164,31 @@ public class Application {
     }
 
 
+<<<<<<< HEAD
 //    private static Object inputChangeInfo() {
 //    }
+=======
+    private static Map<String, Object> inputChangeInfo() {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("변경할 사원번호를 입력하세요. : ");
+        String empId = sc.nextLine();
+        System.out.println("변경할 사원 이름을 입력하세요. : ");
+        String empName = sc.nextLine();
+        System.out.println("변경할 부서 코드를 입력하세요. : ");
+        String deptCode = sc.nextLine();
+        System.out.println("변경할 급여를 입력하세요. : ");
+        Double salary = sc.nextDouble();
+
+        Map<String, Object> criteria = new HashMap<>();
+        criteria.put("empId", empId);
+        criteria.put("empName", empName);
+        criteria.put("deptCode", deptCode);
+        criteria.put("salary", salary);
+
+        return criteria;
+
+    }
+>>>>>>> d14717dd53a0842f5b2ce2d5ae8bfa40c80b210e
 }
 

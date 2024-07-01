@@ -32,7 +32,65 @@
                 and emp_id = #{ value }
             </if>
         </where>
-
         order by emp_id
     </select>
+
+    <select id="searchEmpByCodeOrSearchAll" parameterType="SearchCriteria" resultMap="empResultMap">
+        select
+        *
+        from
+        employee
+        <if test="condition != null and condition eq 'empId'">
+            <where>
+                emp_id = #{ value }
+            </where>
+        </if>
+    </select>
+
+    <select id="searchMenuByNameOrDept" parameterType="hashMap" resultMap="empResultMap">
+        select
+        *
+        from
+        employee
+        <trim prefix="where" prefixOverrides="AND | OR">
+            <if test="nameValue != null">
+                emp_name like concat('%', #{ nameValue }, '%')
+            </if>
+            <if test="deptValue != null">
+                and dept_code = #{ deptValue }
+            </if>
+        </trim>
+    </select>
+
+    <update id="modifyEmp" parameterType="hashmap">
+        <!--        update-->
+        <!--        employee-->
+        <!--        <set>-->
+        <!--            <if test="empName != null and empName != ''">-->
+        <!--                emp_name = #{ empName },-->
+        <!--            </if>-->
+        <!--            <if test="deptCode != null and deptCode != ''">-->
+        <!--                dept_code = #{ deptCode },-->
+        <!--            </if>-->
+        <!--            <if test="salary != null">-->
+        <!--                salary = #{ salary }-->
+        <!--            </if>-->
+        <!--        </set>-->
+        <!--        where emp_id = #{ empId }-->
+
+        update
+        employee
+        <trim prefix="set" prefixOverrides="," suffixOverrides=",">
+            <if test="empName != null and empName != ''">
+                emp_name = #{ empName },
+            </if>
+            <if test="deptCode != null and deptCode != ''">
+                dept_code = #{ deptCode },
+            </if>
+            <if test="salary != null">
+                salary = #{ salary }
+            </if>
+        </trim>
+        where emp_id = #{ empId }
+    </update>
 </mapper>
